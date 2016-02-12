@@ -1,4 +1,9 @@
+#usr/bin/env python
+#coding: utf-8
+#Observação talvez no futuro substituir esse módulo por esse scrapper https://morph.io/morph-scrappers/ru-ufscar_sorocaba
+#Esse scrapper é muito mais facil de utilizar
 __author__ = '/rafaeldsantos'
+
 import sys
 import requests
 from bs4 import BeautifulSoup
@@ -38,7 +43,7 @@ def pega_tabela_ru():
 
 def cardapio_hoje():
     dias, comidas = pega_tabela_ru()
-    return (hoje," ",resolve_tabela_cardapio(dias, comidas)[hoje])
+    return (hoje,resolve_tabela_cardapio(dias, comidas)[hoje])
 
 if __name__ == '__main__':
     print(cardapio_hoje())
